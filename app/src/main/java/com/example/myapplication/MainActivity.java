@@ -50,21 +50,14 @@ public class MainActivity extends AppCompatActivity {
     public void myalarm(View b){
         EditText etText=findViewById(R.id.txtalm);
         int p=Integer.parseInt(etText.getText().toString());
-       // EditText editText=(EditText)findViewById(R.id.editalerm);
-//        int txt = Integer.parseInt(etText.getText().toString());
 
-//        PendingIntent pendingIntent;
         Intent intent=new Intent(getApplicationContext(),MyReceiver.class);
         PendingIntent pendingIntent=PendingIntent.getBroadcast(this.getApplicationContext(),0,intent,0);
         AlarmManager alarmManager=(AlarmManager)getSystemService(ALARM_SERVICE);
-//        alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+(p*1000),pendingIntent);
-//        alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+(p*1000),pendingIntent);
+
         alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+(p*1000),pendingIntent);
         Toast.makeText(this,"alarm set in"+ p +"seconds",Toast.LENGTH_LONG).show();
-//        pendingIntent=PendingIntent.getBroadcast(this.getApplicationContext(),0,intent,0);
-//        AlarmManager alarmManager= (AlarmManager) getSystemService(ALARM_SERVICE);
-//        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (txtint * 1000), pendingIntent);
-//        Toast.makeText(this, "man", Toast.LENGTH_LONG);
+
     }
 
     @Override
