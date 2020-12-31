@@ -1,67 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main3Activity">
+
 
     <Button
         android:id="@+id/saveButton_public"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_below="@+id/editText_data"
-        android:layout_marginEnd="48dp"
-        android:layout_marginTop="8dp"
+
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/button_layout"
         android:onClick="savePublicly"
         android:padding="8dp"
-        android:text="@string/save_button_public"
+        android:text="save_button_public"
         android:textAllCaps="false"
-        android:textColor="@color/textColor" />
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_data"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/saveButton_private"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/editText_data"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/saveButton_public"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="60dp"
+
         android:background="@drawable/button_layout"
         android:onClick="savePrivately"
-        android:padding="8dp"
-        android:text="@string/save_button_private"
+        android:padding="1dp"
+        android:text="save_button_private"
         android:textAllCaps="false"
-        android:textColor="@color/textColor" />
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton_public"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/viewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/saveButton_public"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="483dp"
         android:background="@drawable/button_layout"
         android:onClick="viewInformation"
         android:padding="8dp"
-        android:text="@string/view_button"
+        android:text="view_button"
         android:textAllCaps="false"
-        android:textColor="@color/textColor" />
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton_public"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_data"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="162dp"
         android:autofillHints=""
-        android:hint="@string/edit_text_data"
-        android:inputType="textMultiLine" />
+        android:hint="edit_text_data"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_data"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView_data"
@@ -69,9 +88,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="@string/text_view_data"
+        android:text="text_view_data"
         android:textAllCaps="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -149,4 +149,6 @@ default:
 
     }
 
+    public void viewInformation(View view) {
+    }
 }
